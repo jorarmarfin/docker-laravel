@@ -1,7 +1,7 @@
-FROM fedora:latest
+FROM ubuntu:18.10
 MAINTAINER Luis Mayta <luis.mayta@gmail.com>
-RUN dnf -y update
+RUN apt-get update
 EXPOSE 80
-#RUN ["systemctl start httpd.service","D","FOREGROUND"]
+CMD ["D","FOREGROUND"]
 
 

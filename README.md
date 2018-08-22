@@ -1,7 +1,7 @@
 # docker-apache-php7-laravel
 
 #Paquetes
--Distribucion fedora 28
+-Distribucion Ubuntu 18.10
 -php 7.2
 
 
