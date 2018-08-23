@@ -1,0 +1,1 @@
+docker run --name srv-laravel -d -p 80:80 web-laravel
