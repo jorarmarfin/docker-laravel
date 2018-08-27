@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    container_name: srv-laravel
+    image: lfmc/iso-laravel:0.1
+    build: .
+    networks:
+      - net
+    ports:
+      - "81:80"
+    volumes:
+      - /home/lmayta/Docker/Volumen/apache/html:/var/www/html
+  db:
+    container_name: srv-mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /home/lmayta/Docker/Volumen/mysql/data:/var/lib/mysql
+    ports:
+      - "33007:3306"
+    networks:
+      - net
+networks:
+  net:

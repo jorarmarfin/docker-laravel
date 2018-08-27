@@ -1,13 +1,7 @@
-#Plataforma CentOS7.0
-FROM centos:7
+FROM php:7.2-apache
 MAINTAINER Luis Mayta <luis.mayta@gmail.com>
-
-RUN yum install -y httpd
-
-WORKDIR /var/www
+COPY ./files/test.php /var/www/html
 
 EXPOSE 80
 
-CMD apache2ctl -DFOREGROUND
-#laravel necesita mbstring
 
