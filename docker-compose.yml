@@ -18,7 +18,7 @@ services:
     volumes:
       - /home/lmayta/Docker/Volumen/mysql/data:/var/lib/mysql
     ports:
-      - "33007:3306"
+      - "3307:3306"
     networks:
       - net
 networks:
