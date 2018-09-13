@@ -10,11 +10,12 @@ services:
       - "81:80"
     volumes:
       - ./html:/var/www/html
-      - ./php:/var/www/html
+      #- ./apache/:/usr/local/apache2/conf
+      #- ./php/:/usr/local/etc/php/conf.d
   # db:
   #   container_name: srv-mysql
   #   image: mysql:5.7
-  #   environment:
+  #   environment:docker
   #     MYSQL_ROOT_PASSWORD: root
   #   volumes:
   #     - /mysql:/var/lib/mysql
