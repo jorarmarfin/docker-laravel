@@ -5,21 +5,22 @@ services:
     image: lfmc/iso-laravel:0.1
     build: .
     networks:
-      - net
+      - red_laravel
     ports:
       - "81:80"
     volumes:
-      - /home/lmayta/Docker/Volumen/apache/html:/var/www/html
-  db:
-    container_name: srv-mysql
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - /home/lmayta/Docker/Volumen/mysql/data:/var/lib/mysql
-    ports:
-      - "3307:3306"
-    networks:
-      - net
+      - ./html:/var/www/html
+      - ./php:/var/www/html
+  # db:
+  #   container_name: srv-mysql
+  #   image: mysql:5.7
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
+  #   volumes:
+  #     - /mysql:/var/lib/mysql
+  #   ports:
+  #     - "3307:3306"
+  #   networks:
+  #     - red_laravel
 networks:
-  net:
+  red_laravel:
